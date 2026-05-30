@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>연습용 로그인</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f2f5;
+    font-family: Arial, sans-serif;
+}
+
+.box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+<div class="box">
+    <h2>로그인</h2>
+
+    <input type="text" id="username" placeholder="아이디">
+
+    <input type="password" id="password" placeholder="비밀번호">
+
+    <button onclick="login()">로그인</button>
+
+    <p id="result"></p>
+</div>
+
+<script>
+function login() {
+    const id = document.getElementById("username").value;
+    const pw = document.getElementById("password").value;
+
+    document.getElementById("result").innerText =
+        "입력한 아이디: " + id + " / 비밀번호 길이: " + pw.length;
+}
+</script>
+</body>
+</html>
